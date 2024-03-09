@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/5Dia/style.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="player">
+        <div class="player__current-song">
+            <div class="player__cd">
+                <div class="player__cd-thumb"
+                    style="background-image: url('https://f4.bcbits.com/img/a0568269163_16.jpg')"></div>
+            </div>
+            <div id="js-playing-now" class="player__playing-now">
+                <p>Tocando Agora</p>
+                <h2>Musica</h2>
+            </div>
+            <div class="player__controls">
+                <div class="player__button btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="player__button btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="player__button btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+                <div class="player__button btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="player__button btn-random">
+                    <i class="fas fa-random"></i>
+                </div>
+            </div>
+            <div class="player__progress">
+                <div class="player__progress-start-time">0:00</div>
+                <input class="player__progress-bar" type="range" value="0" step="0.00001" min="0" max="100" />
+                <div id="js-duration-song" class="player__progress-end-time">7:00</div>
+            </div>
+            <audio id="js-player-audio" class="player__audio" src="#"></audio>
+        </div>
+        <div class="player__playlist">
+            <div class="player__song">
+                <div class="player__song-number">1</div>
+                <div class="player__song-infos">
+                    <h3 class="player__song-title">Nome da Musica</h3>
+                    <p class="player__song-author">Artista</p>
+                </div>
+                <div class="player__song-duration">
+                    Duraçao da Musica
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="/5Dia/script.js"></script>
+</body>
+
+</html>
